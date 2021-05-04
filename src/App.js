@@ -1,24 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import React, { lazy, Suspense } from "react";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { LoadingOutlined } from "@ant-design/icons";
+const Home = lazy(() => import("./components/pages/Home"));
+const ProductDetail = lazy(() => import("./components/pages/ProductDetail"));
+const Header = lazy(() => import("./components/pages/Header"));
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Suspense
+      fallback={
+        <div className="col text-center p-5">
+          <LoadingOutlined />
+        </div>
+      }
+    >
+      <Router>
+        <Header> </Header>
+        <ToastContainer />
+        <Switch>
+          <Route path="/" exact>
+            <Home />
+          </Route>
+
+          <Route path="/Product/:id" exact>
+            <ProductDetail />
+          </Route>
+        </Switch>
+      </Router>
+    </Suspense>
   );
 }
 
