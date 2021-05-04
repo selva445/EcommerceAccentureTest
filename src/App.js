@@ -9,6 +9,7 @@ const ProductDetail = lazy(() => import("./components/pages/ProductDetail"));
 const Header = lazy(() => import("./components/pages/Header"));
 
 function App() {
+  // Implemented Code SPlitting to minimize the package and better performance
   return (
     <Suspense
       fallback={
@@ -21,10 +22,11 @@ function App() {
         <Header> </Header>
         <ToastContainer />
         <Switch>
+          {/* Home Page for all products */}
           <Route path="/" exact>
             <Home />
           </Route>
-
+          {/* Single Product Page */}
           <Route path="/Product/:id" exact>
             <ProductDetail />
           </Route>
