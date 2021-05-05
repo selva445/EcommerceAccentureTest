@@ -43,10 +43,10 @@ export default function ProductCard({ product }) {
             <p className="font-weight-bold text-secondary">Add to Cart </p>
           </a>
           <hr></hr>
-          <a href={`/product/${index + 1}`} className="card-link">
+          <a href={`/product/${index + 1}`} className="card-link" data-testid="productview">
             {/* ANt design View  Logo */}
             <EyeOutlined className="text-warning" /> <br />{" "}
-            <p className="font-weight-bold text-warning">View This Product </p>
+            <p className="font-weight-bold text-warning" data-testid="productview">View This Product </p>
           </a>
         </div>
       </div>
