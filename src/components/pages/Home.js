@@ -61,10 +61,11 @@ export default function Home() {
             name="category"
             className="form-control"
             onChange={handleChangetype}
+            data-testid="select"
           >
             <option>All Products</option>
             {types.map((c) => (
-              <option key={c} value={c}>
+              <option key={c} value={c} data-testid="select-option">
                 {c}
               </option>
             ))}
@@ -78,6 +79,7 @@ export default function Home() {
             type="text"
             className="form-control"
             id="category"
+            data-testid="category"
             placeholder="Bitter/Megumi/Blonde ..etc"
             value={filter1}
             onChange={settextFilter}
