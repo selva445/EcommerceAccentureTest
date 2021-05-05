@@ -1,5 +1,20 @@
-# Getting Started with Create React App
+# Deployed To Heroku
+Please navigate to https://selvaaccenturetest.herokuapp.com/ to have a demo of the application
 
+CI/CD for Main Branch is configured so any changes to Main Branch is auto deployed if the build succeeds
+
+# How to Add Products
+
+Please go to JsonProducts.js in src/components/utils folder and add data to JSON files and place your static assessts[images] in public folder to view the products
+
+***How to use the APP***
+Select the Products Based on the Filter Types [ Beer/Cider..etc]
+Enter any text field to do a sub category filter
+Click on View Product in any Product and it will land you in Product Details Page
+The Webpage is responsive [ designed with MobileFirstApproach]
+**Your Feedback is appreciated**
+
+# Getting Started with Create React App
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
