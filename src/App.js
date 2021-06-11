@@ -12,6 +12,7 @@ const ProductDetail = lazy(() => import("./components/pages/ProductDetail"));
 const Header = lazy(() => import("./components/pages/Header"));
 const FallBackErrorComponent = lazy(() =>
   import("./components/cards/FallBackErrorComponent")
+  //added for test
 );
 //dummy code to check conflict2
 
