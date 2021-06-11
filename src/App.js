@@ -13,7 +13,7 @@ const Header = lazy(() => import("./components/pages/Header"));
 const FallBackErrorComponent = lazy(() =>
   import("./components/cards/FallBackErrorComponent")
 );
-//dummy code to check conflict
+//dummy code to check conflict2
 
 function App() {
   // Implemented Code SPlitting to minimize the package and better performance
